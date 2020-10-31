@@ -8,6 +8,7 @@ class StudentModel {
         const sql = "SELECT * FROM Student";
         connection.query(sql,(error, results)=>{
             if (error) throw err;
+            console.log(results);
             return results;
         });
     };
