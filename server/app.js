@@ -1,13 +1,24 @@
+const database = require("./dbConnection.js");
 
-const express = require('express')
-const app = express()
-const port = 8000
+const cors = require("cors");
+const express = require('express');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const bodyParser = require("body-parser");
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+
+app.listen(8000, () => {
+  console.log("Server running on port 8000");
+});
+
+database.connect(err => {
+  if (err) throw err;
+  console.log("Connected to database !");
+});
+
+
+module.exports = app;
 
