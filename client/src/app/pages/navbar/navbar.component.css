@@ -1,7 +1,32 @@
+
+
+
 nav{
-  background-image: linear-gradient(to right, rgb(0, 140, 255), rgb(41, 228, 187));
+ /* background-image: linear-gradient(to right, rgb(0, 140, 255), rgb(41, 228, 187));*/
   min-height: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   width: 100%;
+  z-index: 5;
 }
+
+
+.nav-link{
+	color: white;
+	border: solid 1.5px green;
+	border-radius: 5px;
+	color: green;
+}
+a:hover{
+	color: white;
+	transition: 
+
+}
+.nav-item:hover{
+	background-color: green;
+	border: solid 1.5px green;
+	border-radius: 5px;
+}
+
+
+
