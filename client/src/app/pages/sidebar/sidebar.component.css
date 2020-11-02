@@ -1,8 +1,71 @@
+
+
+
 .sidebar{
   box-shadow: 0 4px 8px 0 rgba(151, 151, 151, 0.2), 0 6px 20px 0 rgba(185, 185, 185, 0.19);
-  width: 190px;
+  width: 250px;
   min-width: 190px;
   height: 120vh;
-  background-color: white;
-  color: grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(42,42,42, 0.8);
+  padding-top: 60px;
+  z-index: 0;
+
 }
+.list-items{
+	padding-top: 30px;
+	padding-left: 30px;
+}
+.list-item{
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.50);
+	padding: 10px 20px ;
+	cursor: pointer;
+	position: relative;
+	transition: 
+}
+
+.list-item:hover {
+	color: white;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+
+}
+.list-item.selected{
+	color: white;
+
+}
+
+.list-item::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background-color: pink;
+
+	opacity: 0;
+	transform: scaleY(0);
+	transition: transform 0.2s, opacity 0.2s;
+}
+
+.list-item:hover::before{
+	opacity: 0.35;
+	transform: scaleY(0.5) scaleX(2);
+	
+}
+
+.list-item.selected::before{
+	opacity: 1;
+	transform: scaleY(1);
+}
+
+.list-item i.material-icons{
+	margin-right: 13px;
+	font-size: 24px;}
+
+
+	
