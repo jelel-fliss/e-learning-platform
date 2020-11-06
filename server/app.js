@@ -8,9 +8,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-/** Router */
-const router = express.Router();
-
 /** Connecting to Database */
 
 database.connect(err => {
@@ -22,7 +19,6 @@ database.connect(err => {
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use("/", router);
 
 /** Routes */
 
@@ -32,8 +28,6 @@ require('./controller/student.controller.js')(app);
 app.listen(8000, () => {
   console.log("Server running on port 8000");
 });
-
-module.exports = router;
 
 
 
