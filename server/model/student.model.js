@@ -12,6 +12,15 @@ class StudentModel {
             return results;
         });
     };
+
+    getById(id) {
+        const sql = "SELECT * FROM Student WHERE id = " + id;
+        connection.query(sql, (error, results)=>{
+            if (error) throw err;
+            console.log(results);
+            return results;
+        })
+    }
     
 }
 
