@@ -10,5 +10,10 @@ module.exports = function(app){
     response.send(list);
   });
 
+  app.get('/student/:id', function(request,response) {
+    
+    response.send(JSON.stringify(studentModel.getById(request.params.id)));
+  })
+
   //other routes..
 }

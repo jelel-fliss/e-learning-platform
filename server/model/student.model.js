@@ -1,4 +1,5 @@
 connection = require("./../dbConnection.js");
+resultManager = require("./result.manager.js");
 
 class StudentModel {
 
@@ -8,8 +9,7 @@ class StudentModel {
         const sql = "SELECT * FROM Student";
         connection.query(sql,(error, results)=>{
             if (error) throw err;
-            console.log(results);
-            return results;
+            return resultManager.formatResults(results);
         });
     };
 
@@ -17,8 +17,8 @@ class StudentModel {
         const sql = "SELECT * FROM Student WHERE id = " + id;
         connection.query(sql, (error, results)=>{
             if (error) throw err;
-            console.log(results);
-            return results;
+            
+            return resultManager.formatResults(results)[0];
         })
     }
     
