@@ -11,9 +11,6 @@ const app = express();
 /** Router */
 const router = express.Router();
 
-/** Controllers */
-const studentController = require('./controller/student.controller.js');
-
 /** Connecting to Database */
 
 database.connect(err => {
@@ -21,21 +18,22 @@ database.connect(err => {
   console.log("Connected to database !");
 });
 
-/** Student Routes **/ 
-
-// GET All Students Route.
-router.get('/students/all', (request, response) => {
-  studentController.all_students_list(request, response);
-});
+/** Dependencies **/ 
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/", router);
 
+/** Routes */
+
+require('./controller/student.controller.js')(app);
+
 
 app.listen(8000, () => {
   console.log("Server running on port 8000");
 });
+
+module.exports = router;
 
 
 
