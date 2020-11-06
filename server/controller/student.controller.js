@@ -1,14 +1,14 @@
 const studentModel = require("./../model/student.model.js");
 
-class StudentController {
-    constructor() {};
+// GET All Students Route.
 
-    /** GET Method : All Students */
-    all_students_list(request, response ) {
-        const list = studentModel.getAll();
-        response.send(list);
-    }
 
+module.exports = function(app){
+
+  app.get('/students/all', function(request, response){
+    const list = studentModel.getAll();
+    response.send(list);
+  });
+
+  //other routes..
 }
-
-module.exports = new StudentController();
