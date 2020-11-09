@@ -7,6 +7,8 @@ import { PagesComponent } from './pages/pages.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'app' , component: PagesComponent },
+
+  
 ];
 
 @NgModule({
