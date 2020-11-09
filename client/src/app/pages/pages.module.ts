@@ -15,6 +15,8 @@ import { SamplePageThreeComponent } from './sample-page-three/sample-page-three.
 import { SamplePageFourComponent } from './sample-page-four/sample-page-four.component';
 import { SamplePageFiveComponent } from './sample-page-five/sample-page-five.component';
 
+import { ClassesComponent } from './classes/classes.component';
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -25,7 +27,8 @@ import { SamplePageFiveComponent } from './sample-page-five/sample-page-five.com
     SamplePageTwoComponent,
     SamplePageThreeComponent,
     SamplePageFourComponent,
-    SamplePageFiveComponent
+    SamplePageFiveComponent,
+    ClassesComponent,
   ],
   exports: [
     SidebarComponent,
