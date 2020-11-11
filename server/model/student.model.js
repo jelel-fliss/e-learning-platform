@@ -7,19 +7,28 @@ class StudentModel {
 
     getAll() {
         const sql = "SELECT * FROM Student";
-        connection.query(sql,(error, results)=>{
-            if (error) throw err;
-            return resultManager.formatResults(results);
-        });
+        var asyncRequest = new Promise(function(resolve, reject){
+            connection.query(sql,(error, results)=>{
+                if (error) {
+                    reject(error);
+                } ;
+                return resolve(resultManager.formatResults(results));
+            });
+          });
+        return asyncRequest;
+        
     };
 
     getById(id) {
         const sql = "SELECT * FROM Student WHERE id = " + id;
-        connection.query(sql, (error, results)=>{
-            if (error) throw err;
-            
-            return resultManager.formatResults(results)[0];
-        })
+        var asyncRequest = new Promise((resolve, reject)=>{
+            connection.query(sql, (error, results)=>{
+                if (error) reject(error);
+                
+                resolve(resultManager.formatResults(results)[0]);
+            });
+        });
+        return asyncRequest;
     }
     
 }
