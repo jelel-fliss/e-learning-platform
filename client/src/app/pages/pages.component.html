@@ -1,9 +1,11 @@
-<app-navbar></app-navbar>
-<div class="fusion" style="background-color: white;">
+<app-navbar (SendRequestToData)="processReq($event)" ></app-navbar>
+<div class="fusion"  style="background-color: black;" >
+	
 	<div class="row">
 		<app-sidebar></app-sidebar>
 			<div class="page">
 				<router-outlet ></router-outlet>
+				
 			</div>
 	</div>
 </div>
