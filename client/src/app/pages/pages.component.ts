@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class PagesComponent {
   title = 'E-learning platform';
+  
+  
+
+
+	constructor() {}
+	
+  
+  ngOnInit() {};
+
+  processReq(message: any){
+  alert(message);
+  }
 }
+
