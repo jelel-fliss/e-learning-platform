@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , EventEmitter , Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+	@Output() SendRequestToData = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  sendEvent (){
+  this.SendRequestToData.emit(
+  ` Hello`
+  );
   }
 
 }
