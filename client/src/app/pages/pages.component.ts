@@ -17,7 +17,7 @@ export class PagesComponent {
   ngOnInit() {};
 
   processReq(message: any){
-  alert(message);
+    console.log(message);
   }
 }
 
