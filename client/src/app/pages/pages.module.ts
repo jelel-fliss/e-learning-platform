@@ -13,6 +13,8 @@ import { PagesRoutes } from './pages-routing.module';
 import { SamplePageTwoComponent } from './sample-page-two/sample-page-two.component';
 
 
+import { ClassesComponent } from './classes/classes.component';
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -20,6 +22,7 @@ import { SamplePageTwoComponent } from './sample-page-two/sample-page-two.compon
     PagesComponent,
     HomeComponent,
     SamplePageTwoComponent,
+    ClassesComponent,
   ],
   exports: [
     SidebarComponent,
