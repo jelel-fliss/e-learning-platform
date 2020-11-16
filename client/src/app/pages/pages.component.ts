@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PagesComponent {
   title = 'E-learning platform';
-  
+  theme: string;
   
 
 
@@ -18,6 +18,7 @@ export class PagesComponent {
 
   processReq(message: any){
     console.log(message);
+    this.theme = message;
   }
 }
 
