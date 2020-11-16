@@ -1,11 +1,17 @@
-.page{
-	padding: 50px;
+
+.example-section{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	height: 60px;
+	background-color: #919191;
+	padding-left: 20px;
 	margin-top: 50px;
-	
-
-
-	
 }
-body{
-	height: 200px;
+.white-theme{
+	background-color: white;
+}
+
+.dark-theme{
+	background-color: black;
 }

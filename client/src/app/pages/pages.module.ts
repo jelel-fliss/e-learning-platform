@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { NavbarComponent } from './navbar/navbar.component';
@@ -29,6 +31,9 @@ import { ClassesComponent } from './classes/classes.component';
     NavbarComponent,
   ],
   imports: [
+    
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forChild(PagesRoutes),
