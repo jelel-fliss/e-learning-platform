@@ -12,19 +12,19 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.theme = "dark-theme";
+    this.theme = "white-theme";
   }
   sendEvent (){
-  if (this.theme == "dark-theme") {
-    this.theme = "white-theme";
+  if (this.theme == "white-theme") {
+    this.theme = "dark-theme";
     this.SendRequestToData.emit(
       this.theme
       );
   } else {
-    this.theme = "dark-theme";
+    this.theme = "white-theme";
     this.SendRequestToData.emit(
-      this.theme
-      );
+      this.theme);
+     
   }
   }
 
