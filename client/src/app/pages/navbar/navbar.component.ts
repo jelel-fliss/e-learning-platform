@@ -1,5 +1,5 @@
 import { Component, OnInit , EventEmitter , Input, Output} from '@angular/core';
-import { SamplePageThreeComponent } from '../sample-page-three/sample-page-three.component';
+
 
 @Component({
   selector: 'app-navbar',
