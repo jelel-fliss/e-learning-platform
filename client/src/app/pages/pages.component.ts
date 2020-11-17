@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class PagesComponent {
   title = 'E-learning platform';
+  theme: string;
+  
+
+
+	constructor() {}
+	
+  
+  ngOnInit() {};
+
+  processReq(message: any){
+    console.log(message);
+    this.theme = message;
+  }
 }
+
