@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile.database
+    command: --default-authentication-plugin=mysql_native_password     
+    
+  angular:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.angular
+    
+    ports:
+      - '9000:80'
+
+  node:
+    build : 
+      context: ./server
+      dockerfile: Dockerfile.node
+    expose:
+      - 9000
