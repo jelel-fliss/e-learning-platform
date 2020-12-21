@@ -21,7 +21,7 @@ node {
         
         
         stage('Angular Test') {
-            angular.inside("-v ./client:/app") {
+            angular.inside{
 		dir("client") {
 		    sh 'ng test'
 		}
@@ -30,7 +30,7 @@ node {
         }
         
         stage('Angular Build') {
-            angular.inside("-v ./client:/app") {
+            angular.inside{
             	dir("client") {
 		    sh 'ng build --prod --build-optimizer=true'
 		}
@@ -39,8 +39,8 @@ node {
         }
         
         stage('Express Unit Test') {
-            express.inside() {
-            dir("server") {
+            express.inside{
+            	dir("server") {
 		    sh 'npm run test tests/*.js'
 		}
                 
