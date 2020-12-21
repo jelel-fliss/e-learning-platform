@@ -12,6 +12,8 @@ node {
         }
         stage('Docker Build') {
 
+            sh 'ls'
+
             db = docker.build("cll/database","./sql")
             express = docker.build("cll/express","-f server/Dockerfile.node ./server")    
             angular = docker.build("cll/angular","-f client/Dockerfile.angular ./client")
