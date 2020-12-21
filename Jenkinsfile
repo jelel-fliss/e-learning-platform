@@ -21,23 +21,23 @@ node {
         
         
         stage('Angular Test') {
-            angular.inside{
+            angular.inside("-v ${env.WORKSPACE}/client:/app") {
 		
-                sh 'cd client ; ng test'
+                sh 'ng test'
             }
         }
         
         stage('Angular Build') {
-            angular.inside{
+            angular.inside("-v ${env.WORKSPACE}/client:/app") {
             	
-                sh 'cd client ; ng build --prod --build-optimizer=true'
+                sh 'ng build --prod --build-optimizer=true'
             }
         }
         
         stage('Express Unit Test') {
-            express.inside{
+            express.inside() {
             
-                sh 'cd server ; npm run test tests/*.js'
+                sh 'npm run test tests/*.js'
             }
             
         }    
