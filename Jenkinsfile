@@ -29,7 +29,7 @@ node {
         
         stage('Angular Build') {
             angular.inside{
-                sh 'ng build --prod --build-optimizer=true'
+                /*sh 'ng build --prod --build-optimizer=true'*/
             }
         }
         
