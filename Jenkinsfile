@@ -21,14 +21,14 @@ node {
         
         
         stage('Angular Test') {
-            angular.inside("-v ${env.WORKSPACE}/client:/app") {
+            angular.inside("-v $(env.WORKSPACE)/client:/app") {
 		
                 sh 'ng test'
             }
         }
         
         stage('Angular Build') {
-            angular.inside("-v ${env.WORKSPACE}/client:/app") {
+            angular.inside("-v $(env.WORKSPACE)/client:/app") {
             	
                 sh 'ng build --prod --build-optimizer=true'
             }
