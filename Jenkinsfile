@@ -21,24 +21,26 @@ node {
         
         stage('Express Unit Test') {
             express.inside{
-            	sh 'cd server'
-                sh 'npm run test tests/*.js'
+            
+                sh 'cd server ; npm run test tests/*.js'
             }
             
         }
         
         stage('Angular Test') {
             angular.inside{
-		sh 'cd client'
+		
                 sh 'ng test'
             }
         }
         
         stage('Angular Build') {
             angular.inside{
-            	sh 'cd client'
+            	
                 sh 'ng build --prod --build-optimizer=true'
             }
         }
     
 }
+
+
