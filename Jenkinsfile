@@ -12,8 +12,6 @@ node {
         }
         stage('Docker Build') {
 
-            sh 'ls'
-
             db = docker.build("cll/database","-f sql/Dockerfile.database ./sql")
             express = docker.build("cll/express","-f server/Dockerfile.node ./server")    
             angular = docker.build("cll/angular","-f client/Dockerfile.angular ./client")
@@ -23,22 +21,26 @@ node {
         
         stage('Express Unit Test') {
             express.inside{
-                sh 'npm run test tests/*.js'
+            
+                sh 'cd server ; npm run test tests/*.js'
             }
             
         }
         
         stage('Angular Test') {
             angular.inside{
-		sh 'ls'
+		
                 sh 'ng test'
             }
         }
         
         stage('Angular Build') {
             angular.inside{
+            	
                 sh 'ng build --prod --build-optimizer=true'
             }
         }
     
 }
+
+
