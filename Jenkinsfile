@@ -23,13 +23,14 @@ node {
         
         stage('Angular Test') {
             angular.inside{
+		sh 'ls'
                 sh 'ng test'
             }
         }
         
         stage('Angular Build') {
             angular.inside{
-                /*sh 'ng build --prod --build-optimizer=true'*/
+                sh 'ng build --prod --build-optimizer=true'
             }
         }
         
