@@ -21,6 +21,13 @@ node {
             
         }
         
+        stage('Express Unit Test') {
+            express.inside{
+                sh 'npm run test tests/*.js'
+            }
+            
+        }
+        
         stage('Angular Test') {
             angular.inside{
 		sh 'ls'
@@ -31,12 +38,6 @@ node {
         stage('Angular Build') {
             angular.inside{
                 sh 'ng build --prod --build-optimizer=true'
-            }
-        }
-        
-        stage('Express Unit Test') {
-            express.inside{
-                sh 'npm run test tests/*.js'
             }
         }
     
