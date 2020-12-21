@@ -16,6 +16,7 @@ import { SamplePageTwoComponent } from './sample-page-two/sample-page-two.compon
 
 
 import { ClassesComponent } from './classes/classes.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ClassesComponent } from './classes/classes.component';
     HomeComponent,
     SamplePageTwoComponent,
     ClassesComponent,
+    PdfViewerComponent,
   ],
   exports: [
     SidebarComponent,
