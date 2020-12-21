@@ -16,6 +16,7 @@ import { SamplePageTwoComponent } from './sample-page-two/sample-page-two.compon
 
 
 import { ClassesComponent } from './classes/classes.component';
+import { CommentComponent } from '../comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,12 @@ import { ClassesComponent } from './classes/classes.component';
     HomeComponent,
     SamplePageTwoComponent,
     ClassesComponent,
+    CommentComponent,
   ],
   exports: [
     SidebarComponent,
     NavbarComponent,
+
   ],
   imports: [
     

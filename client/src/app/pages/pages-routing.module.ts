@@ -14,8 +14,8 @@ export const PagesRoutes: Routes = [
     children: [
       { path: '', redirectTo: 'Home', pathMatch: 'full' },
       { path: 'Home', component: HomeComponent},
-       {path: 'page-2', component: SamplePageTwoComponent},
-          {path: 'classes', component: ClassesComponent},
+       {path: 'Profil', component: SamplePageTwoComponent},
+          {path: 'Classes', component: ClassesComponent},
 
 
 
