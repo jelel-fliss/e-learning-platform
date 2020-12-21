@@ -30,14 +30,14 @@ node {
         stage('Angular Test') {
             angular.inside{
 		
-                sh 'ng test'
+                sh 'cd client ; ng test'
             }
         }
         
         stage('Angular Build') {
             angular.inside{
             	
-                sh 'ng build --prod --build-optimizer=true'
+                sh 'cd client ; ng build --prod --build-optimizer=true'
             }
         }
     
