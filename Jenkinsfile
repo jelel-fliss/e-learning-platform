@@ -19,7 +19,15 @@ node {
             
         }
         
-        
+        stage('Express Unit Test') {
+            express.inside{
+            	dir("server") {
+		    sh 'npm run test tests/*.js'
+		}
+                
+            }
+            
+        } 
         stage('Angular Test') {
             angular.inside{
 		dir("client") {
@@ -38,15 +46,7 @@ node {
             }
         }
         
-        stage('Express Unit Test') {
-            express.inside{
-            	dir("server") {
-		    sh 'npm run test tests/*.js'
-		}
-                
-            }
-            
-        }    
+           
 }
 
 
