@@ -19,15 +19,7 @@ node {
             
         }
 	
-	stage('Express Unit Test') {
-            express.inside{
-		sh 'ls server'
-            	sh 'npm run test tests/*.js'
-                
-            }
-            
-        }
-        
+	
          
         stage('Angular Test') {
             angular.inside{
@@ -44,7 +36,15 @@ node {
             }
         }
 	
-	
+	stage('Express Unit Test') {
+            express.inside{
+		sh 'ls server'
+            	sh 'npm run test tests/*.js'
+                
+            }
+            
+        }
+        
         
            
 }
