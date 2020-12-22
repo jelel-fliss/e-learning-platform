@@ -22,7 +22,7 @@ node {
 	
          
         stage('Angular Test') {
-            angular.inside{
+            docker.image("cll/angular").inside(){
 		sh 'ls client'
 		sh 'ng test'
                 
