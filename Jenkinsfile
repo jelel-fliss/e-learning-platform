@@ -22,7 +22,7 @@ node {
 	
          
         stage('Angular Test') {
-            angular.withRun('-v ./client:/app').inside(){
+            angular.inside('-v ./client:/app'){
 		sh 'ls client'
 		sh 'ng test'
                 
