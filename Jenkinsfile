@@ -27,7 +27,7 @@ node {
 		sh 'ng test'
                 
             }*/
-		sh 'docker exec -it angular cd /app && ng test'
+		sh 'docker exec -i angular cd /app && ng test'
 		
         }
         
