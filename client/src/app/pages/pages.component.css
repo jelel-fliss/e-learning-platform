@@ -1,3 +1,10 @@
+.page{
+  z-index: -1;
+  padding-left: 250px;
+  position: absolute;
+  top: 70px;
+  margin: 25px;
+}
 
 .example-section{
 	display: flex;
@@ -9,7 +16,7 @@
 	margin-top: 50px;
 }
 .white-theme{
-	background-color: white;
+	/*background-color: white;*/
 }
 
 .dark-theme{
