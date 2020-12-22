@@ -27,9 +27,8 @@ node {
 		sh 'ng test'
                 
             }*/
-		sh 'docker exec -it angular bash'
-		sh 'ls'
-		sh 'ng test'
+		sh 'docker exec -it angular cd /app && ng test'
+		
         }
         
         stage('Angular Build') {
