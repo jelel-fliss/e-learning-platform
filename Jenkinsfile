@@ -17,9 +17,14 @@ node {
             angular = docker.build("cll/angular","-f client/Dockerfile.angular ./client")
             
             sh 'docker run -d --name angular cll/angular'
+	    sh 'docker run -d --name express cll/express'
         }
 	
-	
+	stage('Express Unit Test') {
+            sh 'docker exec -i express npm run test tests/*.js'
+		
+            
+        }
          
         stage('Angular Test') {
             /*angular.inside('-v ${workspace}/client:/app'){
@@ -38,14 +43,7 @@ node {
             }
         }
 	
-	stage('Express Unit Test') {
-            express.inside{
-		sh 'ls server'
-            	sh 'npm run test tests/*.js'
-                
-            }
-            
-        }
+	
         
         
            
