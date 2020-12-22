@@ -22,7 +22,7 @@ node {
 	
          
         stage('Angular Test') {
-            angular.inside('-v ./client:/app'){
+            angular.inside('-v "$(pwd)"/client:/app'){
 		sh 'ls client'
 		sh 'ng test'
                 
