@@ -1,9 +1,20 @@
-<p>comment works!</p>
-<textarea [(ngModel])="comment"></textarea>
-<br/>
-<br/>
-<button>commenter</button>
+
+
+<p>Commentaires</p>
+<div class="row">
+<div class="col-md-5">
+<textarea type="Text" [(ngModel)]="name" ></textarea>
 <hr>
-<div>
-    <p>{{ comment }}</p>
 </div>
+<hr>
+<div class="col-md-5" style="margin-right:50px;">
+<button class="btn btn-primary" (click)="changer()" style="margin-left: 100px;" [disabled]="name ===''">Commenter</button>
+</div>
+</div>
+<p *ngFor ='let names of postComment'>
+    {{ names }}
+
+</p>
+
+
+    
