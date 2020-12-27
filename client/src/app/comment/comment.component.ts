@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
-comment = "angular";
+
+test=false;
+name = "";
+postComment= [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+ 
+   changer(){
+    
+    this.postComment.push(this.name +" ---------  "+ new Date());
+  
+    this.name="";
+  
+    
   }
 
 }
