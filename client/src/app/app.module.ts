@@ -6,11 +6,12 @@ import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { PagesModule } from './pages/pages.module';
-import { CommentComponent } from './comment/comment.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    
    
   ],
   imports: [
