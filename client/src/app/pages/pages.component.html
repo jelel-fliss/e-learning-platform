@@ -1,13 +1,13 @@
-<app-navbar (SendRequestToData)="processReq($event)" ></app-navbar>
- <div class="fusion white-theme" [ngClass]="theme"  > 
-	 <!-- tjrs on fait le binding avec une propriété de la classe fils  ici c theme -->
-	 
-	
-	<div class="row">
-		<app-sidebar></app-sidebar>
-			<div class="page" >
-				<router-outlet ></router-outlet>
-				
-			</div>
-	</div>
+<app-navbar (SendRequestToData)="processReq($event)"></app-navbar>
+<div class="fusion white-theme" [ngClass]="theme">
+  <!-- tjrs on fait le binding avec une propriété de la classe fils  ici c theme -->
+
+
+
+    <app-sidebar></app-sidebar>
+    <div class="page">
+      <router-outlet></router-outlet>
+
+    </div>
+
 </div>
