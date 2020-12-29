@@ -1,11 +1,9 @@
 import { Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
-import {SamplePageTwoComponent} from './sample-page-two/sample-page-two.component';
 import { ClassesComponent } from './classes/classes.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
-
-
+import { ProfilComponent } from './profil/profil.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -14,16 +12,9 @@ export const PagesRoutes: Routes = [
     children: [
       { path: '', redirectTo: 'Home', pathMatch: 'full' },
       { path: 'Home', component: HomeComponent},
-      { path: 'Profil', component: SamplePageTwoComponent},
+      { path: 'Profil', component: ProfilComponent},
       { path: 'Classes', component: ClassesComponent},
       { path: 'pdf', component: PdfViewerComponent},
-
-
-
-
-
-
-
     ]
   }
 ];
