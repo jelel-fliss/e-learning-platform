@@ -14,15 +14,15 @@ export const PagesRoutes: Routes = [
     children: [
       { path: '', redirectTo: 'Home', pathMatch: 'full' },
       { path: 'Home', component: HomeComponent},
-      { path: 'profil', component: SamplePageTwoComponent},
-      { path: 'classes', component: ClassesComponent},
+      { path: 'Profil', component: SamplePageTwoComponent},
+      { path: 'Classes', component: ClassesComponent},
       { path: 'pdf', component: PdfViewerComponent},
 
 
 
 
 
-    
+
 
     ]
   }
