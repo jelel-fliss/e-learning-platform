@@ -24,6 +24,10 @@
 
 }
 
+.profile-image{
+  border-radius: 50%;
+}
+
 .details-left li{
     font-weight: bold;
 }
@@ -55,7 +59,7 @@ ul {
   margin:40px;
 
  /* margin:auto 85%;*/
- 
+
 
 }
 
@@ -156,7 +160,7 @@ ul {
 .twitterBtn:before{
       font-family: "FontAwesome";
       content: "\f099"; /* add twitter icon */
-      
+
 }
 
 .twitterBtn:hover{
@@ -254,7 +258,7 @@ ul {
 .user img{
     max-height: 150px;
     max-width: 150px;
-    
+
 }
 .top-photo h3 {
     font-size: 16px;
@@ -265,7 +269,7 @@ ul {
 }
 
 .btn-outline{
-    margin-bottom:60px; 
+    margin-bottom:60px;
 }
 }
 

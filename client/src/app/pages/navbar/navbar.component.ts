@@ -8,7 +8,9 @@ import { Component, OnInit , EventEmitter , Input, Output} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   @Output() SendRequestToData = new EventEmitter();
+  @Output() SendSearchToSearchedComponent = new EventEmitter();
   theme :string;
+  value : string;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,5 +29,7 @@ export class NavbarComponent implements OnInit {
      
   }
   }
-
+ onKey(event: any) { //without type info
+   this.value = event.target.value
+}
 }
